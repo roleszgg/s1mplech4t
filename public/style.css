@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1115;
+  color: #e8e8ec;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.screen {
+  height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---------------- auth screen ---------------- */
+
+#auth-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 320px;
+  background: #1a1d24;
+  border: 1px solid #2a2e38;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.auth-card h1 {
+  margin: 0 0 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: #11141a;
+  padding: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: #9a9ca5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.tab-btn.active {
+  background: #2c8c7a;
+  color: white;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2a2e38;
+  background: #11141a;
+  color: #e8e8ec;
+  font-size: 0.9rem;
+}
+
+.auth-form input:focus {
+  outline: 1px solid #2c8c7a;
+}
+
+.auth-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2c8c7a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background: #34a690;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  min-height: 1em;
+  margin: 0;
+}
+
+/* ---------------- chat screen ---------------- */
+
+#chat-screen {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #14171d;
+  border-right: 1px solid #2a2e38;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2e38;
+  font-weight: 600;
+}
+
+#logout-btn {
+  background: none;
+  border: none;
+  color: #9a9ca5;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.user-list li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-list li:hover {
+  background: #1f232c;
+}
+
+.user-list li.active {
+  background: #2c8c7a33;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  flex-shrink: 0;
+}
+
+.dot.online {
+  background: #34d399;
+}
+
+.conversation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #2a2e38;
+  font-weight: 600;
+  color: #9a9ca5;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.msg {
+  max-width: 60%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.msg.mine {
+  align-self: flex-end;
+  background: #2c8c7a;
+  color: white;
+}
+
+.msg.theirs {
+  align-self: flex-start;
+  background: #1f232c;
+}
+
+.msg time {
+  display: block;
+  font-size: 0.65rem;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.message-form {
+  display: flex;
+  border-top: 1px solid #2a2e38;
+  padding: 12px;
+  gap: 8px;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2a2e38;
+  background: #11141a;
+  color: #e8e8ec;
+}
+
+.message-form button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2c8c7a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

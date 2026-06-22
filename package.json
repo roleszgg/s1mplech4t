@@ -1,0 +1,23 @@
+{
+  "name": "simple-chat-app",
+  "version": "1.0.0",
+  "description": "A simple real-time messaging app with bcrypt-hashed passwords, JWT auth, and Socket.io.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/e2e.test.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.2",
+    "socket.io-client": "^4.8.3"
+  }
+}
