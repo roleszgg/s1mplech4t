@@ -1,4 +1,6 @@
 node_modules/
 .env
-data/users.json
-data/messages.json
+.env.*
+!.env.example
+data/*
+!data/.gitkeep
